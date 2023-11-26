@@ -1,0 +1,603 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	transition: all 0.3s linear;
+	font-family: 'Ubuntu', monospace;
+}
+
+html {
+	font-size: 62%;
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	/*height: 3000px;*/
+}
+
+#header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: -100%;
+	left: 0;
+	padding: 0 4rem;
+	background: #fff;
+	box-shadow: 0.1rem 0.2rem #999;
+	z-index: 11;
+}
+
+.logo img{
+	height: 85px;
+	width: 167px;
+}
+
+#header nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+#header li {
+	margin-right: 3rem;
+}
+
+#header li a {
+	color: black;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+#header li a:hover {
+	color: blue;
+}
+
+.fa-bars {
+	font-size: 3rem;
+	color: black;
+	cursor: pointer;
+	display: none;
+}
+
+
+/*home*/
+
+#home {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        76.34deg,
+        #FFFFFF 42.45%,
+        rgba(196, 196, 196, 0) 53.49%), 
+		  url(images/back2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+	 animation: background 10s alternate infinite;
+}
+
+#home .text-md-left {
+	text-align: left !important;
+}
+
+#home .custom-left-margin {
+	margin-left: 5rem;
+}
+
+#home .content {
+	position: relative;
+}
+
+#home .content h1 ,#home .content h2{
+	font-size: 6rem;
+	color: blue;
+}
+
+#home .content h3{
+	font-size: 3rem;
+	color: #333;
+	margin: 1rem auto;
+}
+
+#home .content button {
+	outline: none;
+	border: none;
+	border-radius: 5rem;
+	background: blue;
+	color: #fff;
+	cursor: pointer;
+	height: 4rem;
+	width: 18rem;
+	font-size: 2rem;
+	text-transform: capitalize;
+	margin: 3rem auto;
+}
+
+#home .content button:hover {
+	background: #756fe8;
+}
+
+#home .content button:hover span {
+	transform: translate(0.9rem);
+}
+
+#home .content .icons {
+	position: absolute;
+	left: 5rem;
+	bottom: 9%;
+	width: 100%;
+}
+
+#home .content .icons a {
+	height: 4rem;
+	width: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	background: blue;
+	border-radius: 5rem;
+	font-size: 1.7rem;
+	color: #fff;
+	margin-right: 1.5rem;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+#home .content .icons a:hover {
+	transform: scale(1.1);
+	background: #756fe8;
+}
+
+
+/*course*/
+
+#course {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+#course .heading {
+  	font-size: 4rem;
+  	padding-top: 7rem;
+  	margin: 2rem 0;
+  	text-align: center;
+  	position: relative;
+	color: blue;
+}
+
+.heading::after {
+   content: '';
+   position: absolute;
+   bottom: -0.5rem;
+   left: 50%;
+   transform: translateX(-50%);
+   height: 0.3rem;
+   width: 60%;
+   border-radius: 5rem;
+   background: #333;
+ }
+
+#course .box-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	flex-wrap: wrap;
+}
+
+#course .box {
+	height: 25rem;
+	width: 30rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.3rem #756fe8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 2rem;
+}
+
+#course .box img {
+	height: 40%; 
+	width: 35%;
+	border-radius: 2px;
+	/*justify-content: center;*/
+	transform: translateY(4rem);
+}
+
+#course .box p {
+	font-size: 1.5rem;
+	text-align: center;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(12rem);
+	padding: 0.4rem;
+}
+
+#course .box:hover {
+	background: #b0b0b0;
+}
+
+#course .box:hover img {
+	height: 30%; 
+	width: 25%;
+	transform: translateY(-2rem);
+}
+
+#course .box:hover p {
+	opacity: 1;
+	transform: translateY(0rem);
+}
+
+/*service*/
+
+#service {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	width: 100vw;
+	background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+}
+
+.heading {
+	font-size: 4rem;
+  	padding-top: 7rem;
+  	margin: 2rem 0;
+  	text-align: center;
+  	position: relative;
+	color: white;
+}
+
+#service .box-container {
+    width: 90%;
+}
+
+#service .box {
+	background: white;
+	max-width: 60rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.3 #333;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 4rem 2rem;
+	margin: 2rem;
+	clear: both;
+}
+
+#service img{
+	height: 7rem;
+	margin: 0 3rem 0 2rem;
+	
+}
+
+#service .info {
+	padding-left: 2.5rem;
+	border-left: 0.4rem solid blue;
+}
+
+#service h2 {
+	font-size: 3rem;
+	color: blue;
+}
+
+#service p {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+#service .box:nth-child(2),
+#service .box:nth-child(4){
+	float:right;
+}
+
+/*review*/
+
+#review {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	width: 100vw;
+	background: #333;
+}
+
+#review .box-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	flex-wrap: wrap;
+}
+
+#review .box {
+	max-width: 45rem;
+	height: 30rem;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 2rem;
+	/*padding left: 6rem;*/
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 0 0.3rem #756fe8;
+}
+
+#review .box img {
+	position: absolute;
+	top: 25%;
+	transform: translateY(-50%);
+	height: 10rem;
+	width: 10rem;
+	border-radius: 10rem;
+	border: 0.5rem solid #333;
+	box-shadow: 0 0 5rem blue inset;
+	align-content: center;
+}
+
+#review .info h2 {
+  margin: 1rem 2rem 0 0; 
+  color: blue;
+  text-align: right;
+} 
+
+#review .info span {
+	margin-left: 5px;
+}
+
+#review .info p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 1rem;
+  margin-top: 9rem;
+}
+
+#review .info i {
+	padding: 0.4rem;
+	color: blue;
+}
+
+/*contact*/
+
+#contact {
+	display: grid;
+	place-items: center;
+	background: linear-gradient(rgba(161, 206, 240, 0.8), rgba(161, 206, 240, 0.7)), 
+		url(https://images.unsplash.com/photo-1584473457409-ae5c91d7d8b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTk5NDQ5MDB8&ixlib=rb-4.0.3&q=85) no-repeat;
+	background-size: cover;
+	position: center;
+	background-attachment: fixed;
+	background-blend-mode: screen;
+	
+}
+
+#contact .heading {
+	color: #5a5959;
+}
+
+#contact form {
+	background: #fff;
+	padding-top: 2rem;
+	margin: 2rem auto;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 1rem #333;
+}
+
+#contact form .input-box {
+	text-align: center;
+	position: relative;
+}
+
+#contact form input, textarea, button{
+	outline: none;
+	padding: 0 1rem;
+	height: 4rem;
+	width: 90%;
+	border: 0.3rem solid #333;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem 0;
+}
+
+#contact form input:focus ~ h3, 
+#contact form textarea:focus ~ h3,
+#contact form input:valid ~ h3, 
+#contact form textarea:valid ~ h3 {
+    top: -1rem;
+    left: 5.9%;
+    color: #f56969;
+}
+
+#contact form input:focus, form textarea:focus {
+		border-color: #6c73f5;
+}
+
+#contact form textarea {
+	resize: none;
+	padding: 1rem;
+	height: 20rem;
+}
+
+#contact form h3 {
+	position: absolute;
+	top: 3rem;
+	left: 8%;
+}
+
+#contact form button {
+	border: none;
+	background: #6c73f5;
+}
+
+#contact form button:hover {
+	background: #333;
+	color: white;
+}
+
+/*footer*/
+
+#footer {
+	width: 100%;
+	background: #333;
+	padding: 10px;
+}
+
+#footer h1 {
+	text-align: center;
+	color: white;
+	font-size: 1.9rem;
+	padding-top: 0.4rem;
+}
+
+#footer a {
+	color: #6c73f5;
+}
+
+@keyframes background {
+	0%, 100% {
+		background: linear-gradient(
+        76.34deg,
+        #FFFFFF 42.45%,
+        rgba(196, 196, 196, 0) 53.49%), 
+		  url(images/back2.jpg) no-repeat;
+    	background-size: cover;
+    	background-position: center;
+    	background-attachment: fixed;
+	}
+	25% {
+		background: linear-gradient(
+        76.34deg,
+        #FFFFFF 42.45%,
+        rgba(196, 196, 196, 0) 53.49%), 
+		  url(images/back3.jpg) no-repeat;
+    	background-size: cover;
+    	background-position: center;
+    	background-attachment: fixed;
+	}
+	50% {
+		background: linear-gradient(
+        76.34deg,
+        #FFFFFF 42.45%,
+        rgba(196, 196, 196, 0) 53.49%), 
+		  url(images/back1.jpg) no-repeat;
+    	background-size: cover;
+    	background-position: center;
+    	background-attachment: fixed;
+	}
+}
+
+/*media query*/
+
+@media (max-width: 786px) {
+	html {
+		font-size: 50%;
+	}
+	
+	#header nav{
+		position: fixed;
+		top: -120%;
+		left: 0;
+		height: calc(100vh - 5rem);
+		width: 100vw;
+		background: #fff;
+	}
+	
+	.logo img{
+		height: 66px;
+		width: 140px;
+	}
+	
+	#header nav ul {
+		height: 100%;
+		flex-flow: column;
+		justify-content: center;
+	}
+	
+	#header li {
+		margin: 2rem 0;
+	}
+	
+	#header li a {
+		font-size: 3rem;
+	}
+	
+	#header .fa-bars{
+		display: block;
+	}
+	
+	#header .nav-toggle {
+		top: 6.5rem;
+	}
+	
+	#home {
+		animation: none;
+		background: linear-gradient(
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)),
+			url(images/back-md.jpg) no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	
+	#home .text-md-left {
+		text-align: center !important;
+	}
+	
+	#home .custom-left-margin {
+		margin-left: 0;
+	}
+	
+	#home .content {
+		text-shadow: 0.1rem 0.1rem 0.3rem;
+	}
+	
+	#home .content .icons {
+		left: 50%;
+		transform: translate(-50%);
+	}
+	#contact form {
+		width: 80%;
+	}
+}
+
+@media (max-width: 500px) {
+	#service .box{
+		flex-flow: column;
+		padding: 1.5rem;
+	}
+	
+	#service img {
+		height: 10rem;
+		margin: 1rem;
+	}
+	
+	#service .info {
+		padding-left: 0;
+		padding-top: 3rem;
+		border: none;
+		text-align: center;
+	}
+	
+	#service p {
+		padding: 1rem;
+	}
+}
